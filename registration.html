@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<style>
+	#t1{width: 50%;}
+	.td1{
+	padding: 10px;
+	background-color: DarkRed;
+	}
+	fieldset{
+	background-color: FireBrick;
+	}
+	legend{
+	text-align: center;
+	color: white;
+	}
+	h3{font-family: Franklin Gothic;
+	text-align: center;
+	color: white;
+	font-size: 160%;
+	}
+	b{color: white;}
+	input:hover{color: blue;}
+	select:hover{color: blue;}
+	
+
+</style>
+
+<script type="text/javascript">
+	function test (message){
+		confirm(message);
+	document.write("FORM SUBMITTED");
+	}
+
+</script>
+</head>
+<body>
+	<form autocomplete="on">
+	<table id="t1" border="1px" align="center">
+	<td class="td1">
+		<h3> Student Consultation Form</h3>
+		--------------------------------------------------------------------------------------------------------------------------------
+		
+		<fieldset>
+		<legend id="leg"><b>Personal Information</b></legend>
+		<b>Firstname: <input type="text" name="fn" required autofocus></b></br></br>
+		<b>Lastname:  <input type="text" name="ln" required></b></br></br>
+		<b>Birth date: <input type="date"></b></br></br>
+		<b>Sex: </b> <input type="radio" name="sex" value="male" checked><b>Male <input type="radio" name="sex" value="female">Female</b>
+		</br>
+		</br>
+		<b>Contact No: <input type="tel" pattern="[0-9]{11}" title="11 digit number" required></b> <b> Email: <input type="text"></b>
+		</br>
+		</br>
+		<b>Address: <input type="text;" size="50"></b>
+		</br>
+		</br>
+		</fieldset>
+		</br>
+		<fieldset>
+		<legend><b>Student Information</b></legend>
+		<b>College Enrolled:</b> <select name="" required>
+		<option>- - - - - - - - - -COLLEGES- - - - - - - - - -</option>
+		<option>Institute of Computer Studies</option>
+		<option>College of Criminal Justice Education</option>
+		<option>College of Liberal Arts</option>
+		<option>College of Nursing</option>	
+		</select>
+		</br>
+		</br>
+		<b>Course Enrolled: </b><input list="courses" name="courses" size="22" required>
+		<datalist id="courses">
+		<option>BS Computer Science</option>
+		<option>BS Information Technology</option>
+		<option>BS Nursing</option>
+		<option>BS Criminology</option>
+		<option>AB Engelish</option>
+		<option>AB Filipino</option>
+		<option>AB Political Science</option>
+		<option>BS Economics</option>
+		<option>BS Accountancy</option>
+		<option>AB Journalism</option>
+		<option>AB Broadcasting</option>
+		<option>AB Mass Communication</option>
+		<option>BS Psychology</option>
+		</datalist>
+		<b>Year Level:</b> <select name="" required>
+		<option>1st Year</option>
+		<option>2nd Year</option>
+		<option>3rd Year</option>
+		<option>4th Year</option>
+		</select>
+		</fieldset>
+		</br>
+		<fieldset>
+		<b>Consultation Interest:</b> 
+		</br>
+		<input type="checkbox" name="" value=""><b>Grades 
+		</br>
+		<input type="checkbox" name="" value="">Attendance
+		</br>
+		<input type="checkbox" name="" value="">Academic Performance 
+		</br>
+		<input type="checkbox" name="" value="">Behavior 
+		</br>
+		<input type="checkbox" name="" value="">Projects or Requirements</b>
+		</br>
+		</br>
+		<textarea name="message" rows="10" cols="90">Others...
+		</textarea>
+		</br>
+		</br>
+		<b>Add File: </b> <input type="file" name="" multiple>
+		</fieldset>
+		<br>
+		<fieldset>
+		<b>Desired Date for Consultation: <input type="date" required>
+		<b>Time: </b> <input type="time" name="usr_time" required>	
+		</br>
+		</fieldset>
+		</br>
+		<input type="submit" value="Submit Form" onclick="test('Do you want to submit this form?')" />
+		
+	</td>
+	</form>
+	</table>
+</body>
+</html>
